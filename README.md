@@ -1,94 +1,97 @@
 # Placement_Eligibility_app
-Campus Placement Dashboard
-A dynamic and interactive Streamlit web application that simulates and analyzes student data to determine placement readiness. This tool helps educational institutions and training centers monitor and visualize performance, placement status, soft skills, and more.
+ Placement Eligibility App
+This project is about creating an interactive data dashboard built using Streamlit and SQLite3, designed to filter students based on placement eligibility criteria and generate actionable insights using SQL queries.
 
-📌 Project Overview
-This project emulates a placement analytics dashboard using synthetic student data generated via the Faker library. It provides a centralized platform for stakeholders to:
+📖 Project Overview
+This app simulates student placement records using Faker and visualizes their readiness for placement based on various skill sets. It allows users to:
 
-Monitor student progress and eligibility.
+🔍 Filter students dynamically based on programming skills, soft skills, and placement status
 
-Visualize placement trends.
+📋 View real-time filtered results through an interactive Streamlit web interface
 
-Filter/search candidates based on customizable criteria.
+📊 Extract 10+ meaningful insights using SQL queries (no graphs used here)
 
-Run insightful SQL queries directly on the data.
+🗂 Store and query data using a normalized SQLite3 database
 
-📂 Technologies Used
-Technology	Purpose
-Python	Core programming language
-Streamlit	Frontend web framework
-SQLite	Lightweight database for structured data
-Faker	Generate realistic fake student data
-Pandas	Data manipulation & analysis
+🚀 Features
+✅ Eligibility Filtering Dashboard
+Set filters for:
 
-📊 Key Features
-✅ Overview Page
-Brief introduction to the dashboard and its functionality.
+Student Name
 
-Project structure and data source info.
+City
 
-🔍 Search & Filter Students
-Filter students by name, city, enrollment year, placement status, and company.
+Enrollment Year
 
-Combines students and placements tables into a unified view.
+Placement Status
 
-💼 Placement Reports
-Metrics for total placed students & average package.
+Company Name
 
-Top hiring companies and package range.
+Dynamically view all matching students in a scrollable table with merged data from multiple tables.
 
-Placement status distribution.
+🧠 Insights and Analysis
+10 pre-built SQL insights include:
 
-🧮 SQL Queries
-Select from 10 predefined insightful SQL queries.
-
-View real-time query results (e.g., gender distribution, avg. age, top placements).
-
-Query execution without showing SQL code to the user.
-
-👤 Creator Info
-About the developer with background, tools used, and contact information.
-
-🛠️ Database Structure
-Tables:
-students – student personal & academic info
-
-placements – mock scores, placement status, company & package
-
-programming – coding proficiency data (language, problems solved, projects)
-
-softskills – assessment scores for communication, leadership, etc.
-
-All data is stored in students.db and created via script using Faker.
-
-📁 Folder Structure
-bash
-Copy
-Edit
-├── app.py               # Streamlit app
-├── students.db          # SQLite database
-├── requirements.txt     # Python dependencies
-└── README.md            # Project documentation
-📦 Installation & Running
-bash
-Copy
-Edit
-# Clone the repo
-git clone https://github.com/your-username/placement-dashboard.git
-cd placement-dashboard
-
-# Install dependencies
-pip install -r requirements.txt
-
-# Run Streamlit app
-streamlit run app.py
-📄 Sample SQL Queries Used
 Total number of students
 
-Average age per batch
+Average student age
 
-Top 5 packages offered
+City-wise student count
+
+Gender distribution
+
+Batch-wise average age
+
+Top 5 students placed by package
+
+Programming language popularity
+
+Avg. problems solved per batch
+
+Summary of soft skills scores
 
 Placement status distribution
 
-Programming language popularity
+⚙️ Technologies Used
+Component	Tool
+Data Generation	Faker (Python)
+Backend Database	SQLite3
+Frontend Interface	Streamlit
+Data Handling	Pandas
+(Optional) Visuals	Plotly or Altair (if enabled)
+
+▶️ How to Run the Code
+1. Clone the Repository:
+bash
+Copy
+Edit
+git clone https://github.com/your-username/placement-eligibility-app.git
+cd placement-eligibility-app
+2. Install Required Packages:
+bash
+Copy
+Edit
+pip install -r requirements.txt
+3. Run the Streamlit App:
+bash
+Copy
+Edit
+streamlit run app.py
+4. Open in Browser
+text
+Copy
+Edit
+http://localhost:8501
+🗃️ Database Schema
+The database students.db contains the following normalized tables:
+
+Students: Demographic, academic, and contact information
+
+Programming: Coding performance (language, problems solved, assessments)
+
+SoftSkills: Communication, leadership, critical thinking, teamwork, etc.
+
+Placements: Placement status, company, package, interview rounds
+
+All tables are linked via the student_id field.
+
